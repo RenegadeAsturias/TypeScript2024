@@ -1,4 +1,5 @@
 
+Listado de tipos____________________________________
 01-Tipos-boolean (boleano)
 02-Tipos-number (númerico)
 03-Tipos-string (cadena de caracteres)

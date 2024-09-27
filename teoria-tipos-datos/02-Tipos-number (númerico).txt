@@ -1,1 +1,12 @@
+/**
+Tipos, number (númerico)
 
+Así como en JavaScript, todos los números en TypeScript son ya sean flotantes o enteros. Estos valores flotantes obtienen el valor number mientras que los BigIntegers obtienen el valor bigint. Además de las literales hexadecimales y decimales, TypeScript también soporta binarios y octales que han sido agregados en ECMAScript 2015.
+
+let entero: number = 6;
+let hexadecimal: number = 0xf00d;
+let binario: number = 0b1010;
+let octal: number = 0o744;
+
+Si bien en otros lenguajes de programación existen diferentes tipos para los valores numéricos, en TypeScript estos se pueden representar todos mediante el tipo number. 
+*/

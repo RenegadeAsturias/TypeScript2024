@@ -1,1 +1,14 @@
+/** 
+Boolean
 
+El primer tipo que vamos a explorar es el tipo Boolean (boleano). En TypeScript los valores que puede tener boolean son true (verdadero) y false (falso).
+
+let esVerdadero = true;
+console.log(esVerdadero);
+
+Si ejecutamos el código anterior obtendremos como salida…
+
+true
+
+El resultado debe imprimir el valor de la variable esVerdadero que en este caso la hemos asignado como true. 
+*/

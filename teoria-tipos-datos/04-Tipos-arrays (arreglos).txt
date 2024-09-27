@@ -1,1 +1,20 @@
+/**
+Tipos, arrays (arreglos)
+
+TypeScript al igual que JavaScript, permite trabajar con arreglos de valores. Los arreglos pueden ser escritos de dos formas posibles. La primera es usando los paréntesis [] para denotar un arreglo del tipo definido.
+
+let listaDeNumeros: number[] = [1, 2, 3];
+
+En el ejemplo anterior hemos definido que la variable listaDeNumeros puede solo contener números. En TypeScript si intentamos agregar un tipo diferente dentro de un arreglo nos generará un error.
+
+listaDeNumeros.push("a");
+
+La anterior línea que intenta agregar un string dentro de un arreglo de números generaría un error.
+
+Otra forma de declarar el mismo arreglo es el uso del constructor Array<tipo>.
+
+let listaDeNumeros: Array<number> = [1, 2, 3];
+
+Ambas formas de declarar el arreglo producen el mismo efecto. 
+*/
 

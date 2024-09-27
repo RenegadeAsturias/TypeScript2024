@@ -1,1 +1,21 @@
+/**
+Tipos, string (cadena de caracteres)
 
+Un tipo de valor fundamental para poder construir programas en JavaScript es el tipo string. Estas cadenas de texto se definen de dos formas: por bloques de texto con comillas sencillas o dobles.
+
+let marca: string = "toyota";
+let modelo: string = "prius";
+
+En el ejemplo podemos ver que hemos definido las variables marca y modelo. La primer variable utiliza el valor 'toyota' mediante comillas simples, y la segunda el valor "prius" mediante comillas dobles. 
+
+Ademas de las comillas sencillas y dobles también es posible utilizar template strings, los cuales permiten crear cadenas de caracteres de múltiples lineas mediante el caracter backtick, ademas de poder embedir variables dentro de este template mediante la expresión ${variable}.
+
+let nombre: string = "Raul";
+let apellido: string = "Jimenez";
+let impresion: string = `
+Nombre: ${nombre}
+Apellido: ${apellido}
+`;
+
+En el ejemplo anterior podemos ver como es posible definir un bloque de texto con variables incluidas, estas variables serán reemplazadas por su valor siempre y cuando se encuentren encerradas dentro de la expresión ${}.
+*/

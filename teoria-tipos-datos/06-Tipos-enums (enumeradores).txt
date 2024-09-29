@@ -1,1 +1,38 @@
+/**
+Tipos, enums (enumeradores)
+
+Un agregado bastante útil que proporciona TypeScript a JavaScript es la posibilidad de utilizar enum. Como en cualquier lenguaje similar a C#, un enum es una forma de dar nombres mas amigables a un grupo de sets de valores numéricos.
+
+enum MarcasDeCoche {
+    Toyota,
+    Chevrolet,
+    Ford,
+}
+
+let prius: MarcasDeCoche = MarcasDeCoche.Toyota;
+
+console.log(prius);
+
+En el ejemplo anterior se imprimiría 0 ya que los enums empiezan en dicho valor. Sin embargo este comportamiento puede ser modificado de forma que inicie por ejemplo en 100.
+
+enum MarcasDeCoche {
+    Toyota = 100,
+    Chevrolet,
+    Ford,
+}
+
+let prius: MarcasDeCoche = MarcasDeCoche.Toyota;
+
+console.log(prius);
+
+Ahora el valor impreso sería de 100.
+
+También es posible asignar un valor a cada uno de los elementos de un enum. 
+
+En los ejemplos anteriores hemos accesado el valor de un enumerador, pero que pasa si quisieramos obtener el nombre del índice donde este se encuentra, para ello echamos mano de la referencia de la posición numérica de dicho índice.
+
+console.log(MarcasDeCoche[0]);
+
+El valor impreso sería Toyota como tipo string.
+*/
 

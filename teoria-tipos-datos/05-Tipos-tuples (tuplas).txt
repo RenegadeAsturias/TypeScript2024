@@ -1,1 +1,18 @@
+/**
+Tipos, tuples (tuplas)
 
+Las tuplas permiten expresar un arreglo con un número fijo conocido de elementos, pero que no requieren ser los mismos. Por ejemplo para representar una tupla que contenga un string y un number.
+
+let futbolista: [string, number];
+
+futbolista = ["Raul Jimenez", 28];
+
+Si intentamos capturar otro tipo de valores que no sean consistentes con los que se han definido en la tupla, TypeScript nos generará un error. 
+
+Para acceder a los elementos de una tupla tenemos que utilizar su índice.
+
+console.log(`El nombre es ${futbolista[0]}`);
+console.log(`Su edad es ${futbolista[1]}`);
+
+Si se intenta acceder un índice fuera del rango de la dimensión de la tupla, se generará un error.
+*/

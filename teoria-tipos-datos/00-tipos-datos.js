@@ -14,9 +14,9 @@
     let nombre = "Raul";
     let apellido = "Jimenez";
     let impresion = `
-    Nombre: ${nombre}
-    Apellido: ${apellido}
-    `;
+Nombre: ${nombre}
+Apellido: ${apellido}
+`;
     // 04-arrays (arreglos)
     // Ambas formas de declarar el arreglo producen el mismo efecto. 
     let listaDeNumeros = [1, 2, 3];
@@ -48,4 +48,8 @@
     console.log(MarcasDeCoche2[0]);
     // Para acceder los índices posibles sería [100],[101],[102]
     console.log(MarcasDeCoche2[100]);
+    // 07-any (cualquiera)
+    let variableSinTipo = "Hola Mundo"; // Tratar de evitar siempre que sea posible
+    variableSinTipo = 100;
+    console.log(`variableSinTipo=${variableSinTipo}`);
 })();

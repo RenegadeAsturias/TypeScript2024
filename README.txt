@@ -83,7 +83,7 @@ LocalMachine                                      Undefined
 Finalmente, si volvemos a ejecutar el script que inicialmente nos devolvía el error, veremos que ahora sí permite su ejecución:
 > tsc --init ................. Creado!!!
 
-PS C:\Users\Asturias\Desktop\typescript\bases> tsc --init
+PS C:\Users\Asturias\Desktop\typescript> tsc --init
 
 Created a new tsconfig.json with:                                                                             
                             TS
@@ -95,7 +95,7 @@ Created a new tsconfig.json with:
   forceConsistentCasingInFileNames: true
 
 You can learn more at https://aka.ms/tsconfig
-PS C:\Users\Asturias\Desktop\typescript\bases>
+PS C:\Users\Asturias\Desktop\typescript>
 
 
 

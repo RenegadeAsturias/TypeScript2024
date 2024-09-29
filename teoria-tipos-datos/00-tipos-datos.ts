@@ -59,5 +59,11 @@ console.log(MarcasDeCoche2[0]);
 // Para acceder los índices posibles sería [100],[101],[102]
 console.log(MarcasDeCoche2[100]); 
 
+// 07-any (cualquiera)
+
+let variableSinTipo: any = "Hola Mundo"; // Tratar de evitar siempre que sea posible
+variableSinTipo = 100;
+console.log(`variableSinTipo=${variableSinTipo}`);
+
 })();
 

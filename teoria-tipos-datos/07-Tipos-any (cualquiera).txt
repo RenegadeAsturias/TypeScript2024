@@ -1,1 +1,12 @@
+/**
+Tipos, any (cualquiera)
 
+En ciertas ocasiones no toda la información se encuentra disponible o la declaración de un tipo nos puede llevar a tener un error inesperado, esto puede ocurrir para valores del código que han sido escritos sin utilizar TypeScript o con una librería de un tercero.
+
+let variableSinTipo: any = "Hola Mundo";
+variableSinTipo = 100;
+
+Toma siempre en cuenta que el utilizar any implica que se pierdan los beneficios del tipado, 
+entre ellos el de la seguridad y prevención de errores. 
+La seguridad que el tipado brinda es una de las principales motivaciones para utilizar TypeScript por lo cual se recomienda que no se utilice any a menos que sea estrictamente necesario. 
+*/

@@ -1,1 +1,14 @@
+/**
+Tipos, null y undefined (null e indefinido)
 
+En TypeScript, los tipos undefined y null pueden solo tener el valor undefined y null respectivamente. Así como el tipo void, los tipos undefined y null no resultan tan útiles.
+
+let variableSinDefinir: undefined = undefined;
+let variableNula: null = null;
+
+Por default null y undefined son subtipos de los otros tipos. Esto quiere decir que se pueden asignar null y undefined a otro tipo como number.
+
+Sin embargo si se utiliza --strictNullChecks entonces null y undefined solo pueden ser asignados a unknown, any y a sus respectivos tipos (la única excepción es que undefined también puede ser asignado a void).
+
+En caso de que se desee pasar una lista de posibles tipos como string o null o undefined, es posible utilizar uniones string | null | undefined.
+*/

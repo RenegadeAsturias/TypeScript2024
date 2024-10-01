@@ -1,1 +1,10 @@
+/**
+Tipos, unknown (desconocido)
 
+En ocasiones necesitamos describir un tipo de variable el cual no conocemos. Estos valores pueden provenir de fuentes cuyos valores son dinámicos como una API. En estos casos, necesitamos indicarle al compilador y a los programadores que actualicen el código en un futuro, que esta variable puede tomar cualquier tipo de valor, para ello le asignamos el tipo unknown.
+
+let valorDesconocido: unknown = 4;
+valorDesconocido = true;
+
+En el ejemplo anterior podemos ver que una variable asignada como tipo unknown puede tener diferentes tipos de valores y esto no genera un error del compilador.
+*/

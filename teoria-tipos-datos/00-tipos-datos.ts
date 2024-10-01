@@ -65,5 +65,36 @@ let variableSinTipo: any = "Hola Mundo"; // Tratar de evitar siempre que sea pos
 variableSinTipo = 100;
 console.log(`variableSinTipo=${variableSinTipo}`);
 
+// 08-unknown (desconocido)
+let valorDesconocido: unknown = 4;
+valorDesconocido = true;
+
+// 09-void (ninguno)
+function saludar(): void {
+    console.log("Hola Mundo");
+}
+saludar();
+
+// 10-null y undefined (null e indefinido)
+let variableSinDefinir: undefined = undefined;
+let variableNula: null = null;
+
+// 11-never (nunca)
+// esta funcion no tiene un punto final ya que dispara una excepcion
+function error(mensaje: string): never {
+    throw new Error(mensaje);
+}
+// esta funcion no tiene un punto final ya que dispara un error
+function fallo(): never {
+    return error("Reportar fallo");
+}
+// esta funcion no finaliza ya que posee un loop infinito
+function loopInfinito(): never {
+    while (true) {}
+}
+
+
+
+
 })();
 

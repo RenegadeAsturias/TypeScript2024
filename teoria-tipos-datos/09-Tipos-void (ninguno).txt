@@ -1,1 +1,13 @@
+/**
+Tipos, void (ninguno)
 
+El tipo void puede considerarse como el opuesto a any, mientras any representa cualquier tipo, void representa ningún tipo. Algunas funciones como las de impresión son un ejemplo del uso de void ya que estas no retornan ningún valor.
+
+function saludar(): void {
+    console.log("Hola Mundo");
+}
+
+saludar();
+
+Declarar variables de tipo void no es útil ya que solo se le pueden asignar valores null o undefined. 
+*/

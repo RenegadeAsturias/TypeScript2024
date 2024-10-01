@@ -20,5 +20,5 @@ Listado de tipos_____________________________________
 18-Tipos-interfaces vs types (interfaces vs tipos)
 19-Tipos-lierales (literals) 
 
-
+____________________________________________________
 ____________________________________________________

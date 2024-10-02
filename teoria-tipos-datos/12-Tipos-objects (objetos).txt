@@ -1,5 +1,18 @@
 /**
+Tipos, objects (objetos)
 
+El tipo object representa un tipo no primitivo, cualquier cosa que no sea number, string, boolean, bigint, symbol, null o undefined.
 
+Con el tipo object, las APIs como Object.create pueden ser mejor representadas.
+
+declare function crear(o: object): void;
+
+crear({ prop: 0 });
+crear(null);
+crear(undefined);
+crear([]);
+
+// false es un tipo primitivo, por lo cual se generara un error
+crear(false);
 */
 

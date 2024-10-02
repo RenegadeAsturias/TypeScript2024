@@ -52,4 +52,60 @@ Apellido: ${apellido}
     let variableSinTipo = "Hola Mundo"; // Tratar de evitar siempre que sea posible
     variableSinTipo = 100;
     console.log(`variableSinTipo=${variableSinTipo}`);
+    // 08-unknown (desconocido)
+    let valorDesconocido = 4;
+    valorDesconocido = true;
+    // 09-void (ninguno)
+    function saludar() {
+        console.log("Hola Mundo");
+    }
+    saludar();
+    // 10-null y undefined (null e indefinido)
+    let variableSinDefinir = undefined;
+    let variableNula = null;
+    // 11-never (nunca)
+    // esta funcion no tiene un punto final ya que dispara una excepcion
+    function error(mensaje) {
+        throw new Error(mensaje);
+    }
+    // esta funcion no tiene un punto final ya que dispara un error
+    function fallo() {
+        return error("Reportar fallo");
+    }
+    // esta funcion no finaliza ya que posee un loop infinito
+    function loopInfinito() {
+        while (true) { }
+    }
+    /** 12-objects (objetos)
+    declare function crear(o: object): void;
+    
+    crear({ prop: 0 });
+    crear(null);
+    crear(undefined);
+    crear([]);
+    
+    // false es un tipo primitivo, por lo cual se generara un error
+    crear(false); */
+    // 13-unions (uniones)
+    function imprimirId1(id) {
+        console.log(`El id es ${id}`);
+    }
+    imprimirId1(1);
+    imprimirId1("abc");
+    function imprimirId2(id) {
+        if (typeof id === "string") {
+            console.log(`El id es ${id.toUpperCase()}`);
+        }
+        else {
+            console.log(`El id es ${id.toFixed(2)}`);
+        }
+    }
+    imprimirId2("este_es_mi_id");
+    imprimirId2(100.234234123);
+    // 14-type assertion (confirmación de tipos)
+    let algunValor1 = "esto es un string";
+    let longitudDelString1 = algunValor1.length;
+    // Otra forma de llevar a cabo la misma operación es utilizando <tipo> antes de la variable.
+    let algunValor2 = "este es un string";
+    let longitudDelString2 = algunValor2.length;
 })();

@@ -18,7 +18,7 @@ Listado de tipos_____________________________________
 16-Tipos-aliases (alias)
 17-Tipos-interfaces (interfaces)
 18-Tipos-interfaces vs types (interfaces vs tipos)
-19-Tipos-lierales (literals) 
+19-Tipos-literales (literals) 
 
 ____________________________________________________
 ____________________________________________________

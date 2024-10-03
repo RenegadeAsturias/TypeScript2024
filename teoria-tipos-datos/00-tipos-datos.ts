@@ -129,6 +129,48 @@ let longitudDelString1: number = (algunValor1 as string).length;
 let algunValor2: unknown = "este es un string";
 let longitudDelString2: number = (<string>algunValor2).length;
 
+// 15-functions (funciones)
+
+function elevarAlCuadrado(base: number): number {
+    return base * base;
+}
+
+let numeroBase = 10;
+let numeroAlCuadrado = elevarAlCuadrado(numeroBase);
+console.log(numeroAlCuadrado);
+
+// funciones anónimas
+const nombres = ["Juan", "Pedro", "Luis"];
+
+nombres.forEach(function (s) {
+    console.log(s.toUpperCase());
+});
+
+nombres.forEach((s) => {
+    console.log(s.toUpperCase());
+});
+
+// 16-aliases (alias)
+
+// Alias:
+type Punto = {
+    x: number;
+    y: number;
+};
+
+function imprimirCoordenada(punto: Punto) {
+    console.log(`La coordenada x es : ${punto.x}`);
+    console.log(`La coordenada y es : ${punto.y}`);
+}
+imprimirCoordenada({ x: 10, y: 25 });
+
+type TextoEnMayusculas = string;
+
+function convertirMayusculas(texto: string): TextoEnMayusculas {
+    return texto.toUpperCase();
+}
+console.log(convertirMayusculas("hola mundo"));
+
 
 
 })();

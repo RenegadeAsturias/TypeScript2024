@@ -1,5 +1,48 @@
 /**
+Tipos, aliases (alias)
 
+Hemos estado utilizando tipos directamente en anotaciones. Esto es conveniente, pero es común querer utilizar el mismo tipo mas de una ocasión y referirse a el con un nombre. Un alias de tipo es un nombre dado a cualquier tipo.
 
+type Punto = {
+    x: number;
+    y: number;
+};
+
+function imprimirCoordenada(punto: Punto) {
+    console.log(`La coordenada x es : ${punto.x}`);
+    console.log(`La coordenada y es : ${punto.y}`);
+}
+
+imprimirCoordenada({ x: 10, y: 25 });
+
+La salida del programa será…
+
+La coordenada x es : 10
+La coordenada y es : 25
+
+En este ejemplo al utilizar un alias podemos proporcionar una lista de propiedades de las cuales consta el parámetro punto.
+
+Para crear un alias usamos type, en este caso hemos creado un alías con dos propiedades tipo number pero esto no quiere decir que deban ser ambas iguales.
+
+type Punto = {
+    x: number;
+    y: number;
+};
+
+Los alias son eso únicamente, un alias. No es posible crear diferentes versiones del mismo tipo.
+
+Los alias son eso únicamente, un alias. No es posible crear diferentes versiones del mismo tipo.
+
+type TextoEnMayusculas = string;
+
+function convertirMayusculas(texto: string): TextoEnMayusculas {
+    return texto.toUpperCase();
+}
+
+console.log(convertirMayusculas("hola mundo"));
+
+HOLA MUNDO
+
+En el ejemplo se puede ver que cuando enviamos un string como parámetro, este puede ser retornado como un type TextoEnMayusculas que es un alias de string.
 */
 

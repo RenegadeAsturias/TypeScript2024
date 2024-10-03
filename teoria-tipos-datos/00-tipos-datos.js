@@ -108,4 +108,28 @@ Apellido: ${apellido}
     // Otra forma de llevar a cabo la misma operación es utilizando <tipo> antes de la variable.
     let algunValor2 = "este es un string";
     let longitudDelString2 = algunValor2.length;
+    // 15-functions (funciones)
+    function elevarAlCuadrado(base) {
+        return base * base;
+    }
+    let numeroBase = 10;
+    let numeroAlCuadrado = elevarAlCuadrado(numeroBase);
+    console.log(numeroAlCuadrado);
+    // funciones anónimas
+    const nombres = ["Juan", "Pedro", "Luis"];
+    nombres.forEach(function (s) {
+        console.log(s.toUpperCase());
+    });
+    nombres.forEach((s) => {
+        console.log(s.toUpperCase());
+    });
+    function imprimirCoordenada(punto) {
+        console.log(`La coordenada x es : ${punto.x}`);
+        console.log(`La coordenada y es : ${punto.y}`);
+    }
+    imprimirCoordenada({ x: 10, y: 25 });
+    function convertirMayusculas(texto) {
+        return texto.toUpperCase();
+    }
+    console.log(convertirMayusculas("hola mundo"));
 })();

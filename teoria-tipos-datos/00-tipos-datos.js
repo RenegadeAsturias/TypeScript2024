@@ -132,4 +132,25 @@ Apellido: ${apellido}
         return texto.toUpperCase();
     }
     console.log(convertirMayusculas("hola mundo"));
+    // 17-interfaces (interfaces)
+    function imprimirEtiqueta1(etiqueta) {
+        console.log(etiqueta.label);
+    }
+    let miEtiqueta1 = { numero: 10, label: "Esta es mi etiqueta" };
+    imprimirEtiqueta1(miEtiqueta1);
+    function imprimirEtiqueta2(etiqueta) {
+        console.log(etiqueta.label);
+    }
+    let miEtiqueta2 = { numero: 10, label: "Esta es mi etiqueta" };
+    imprimirEtiqueta2(miEtiqueta2);
+    function crearCuadrado(cuadrado) {
+        const area = cuadrado.ancho * cuadrado.ancho;
+        return { area: area };
+    }
+    crearCuadrado({ ancho: 10 });
+    let punto1 = { x: 10, y: 20 };
+    // punto1.x = 20;
+    let ro = [1, 2, 3, 4, 5];
+    // ¿Cómo agregar propiedades a un type previamente definido?
+    // Cuando se utiliza type no es posible agregar mas propiedades. Esta es una de las diferencias que existen entre interface vs type. 
 })();

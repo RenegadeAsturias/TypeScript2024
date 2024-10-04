@@ -171,6 +171,82 @@ function convertirMayusculas(texto: string): TextoEnMayusculas {
 }
 console.log(convertirMayusculas("hola mundo"));
 
+// 17-interfaces (interfaces)
+
+function imprimirEtiqueta1(etiqueta: { label: string }) {
+    console.log(etiqueta.label);
+}
+
+let miEtiqueta1 = { numero: 10, label: "Esta es mi etiqueta" };
+imprimirEtiqueta1(miEtiqueta1);
+
+interface Etiqueta {
+    label: string;
+}
+
+function imprimirEtiqueta2(etiqueta: Etiqueta) {
+    console.log(etiqueta.label);
+}
+
+let miEtiqueta2 = { numero: 10, label: "Esta es mi etiqueta" };
+
+imprimirEtiqueta2(miEtiqueta2);
+
+
+interface Cuadrado {
+    color?: string;
+    ancho: number;
+}
+
+function crearCuadrado(cuadrado: Cuadrado): { area: number } {
+    const area = cuadrado.ancho * cuadrado.ancho;
+    return { area: area };
+}
+
+crearCuadrado({ ancho: 10 });
+
+
+interface Punto1 {
+    readonly x: number;
+    readonly y: number;
+}
+
+let punto1: Punto1 = { x: 10, y: 20 };
+// punto1.x = 20;
+
+let ro: ReadonlyArray<number> = [1, 2, 3, 4, 5];
+// ro.push(6);
+
+
+// 18-interfaces vs types (interfaces vs tipos)
+
+interface Transporte {
+    nombre: string;
+}
+
+type Figura = {
+    nombre: string;
+};
+
+// ¿Cómo extender una interface?
+interface Auto extends Transporte {
+    ruedas: number;
+}
+
+// ¿Cómo extender un type?
+type Cuadrado1 = Figura & {
+    lados: 4;
+};
+
+// ¿Cómo agregar mas propiedades a una interface previamente definida?
+interface Transporte {
+    peso: number;
+}
+
+// ¿Cómo agregar propiedades a un type previamente definido?
+// Cuando se utiliza type no es posible agregar mas propiedades. Esta es una de las diferencias que existen entre interface vs type. 
+
+
 
 
 })();

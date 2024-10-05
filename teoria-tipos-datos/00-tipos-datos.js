@@ -153,4 +153,9 @@ Apellido: ${apellido}
     let ro = [1, 2, 3, 4, 5];
     // ¿Cómo agregar propiedades a un type previamente definido?
     // Cuando se utiliza type no es posible agregar mas propiedades. Esta es una de las diferencias que existen entre interface vs type. 
+    // 19-lierales (literals)
+    function imprimir(estadoCivil) {
+        console.log(estadoCivil);
+    }
+    imprimir("soltero");
 })();

@@ -246,6 +246,12 @@ interface Transporte {
 // ¿Cómo agregar propiedades a un type previamente definido?
 // Cuando se utiliza type no es posible agregar mas propiedades. Esta es una de las diferencias que existen entre interface vs type. 
 
+// 19-lierales (literals)
+
+function imprimir(estadoCivil: "soltero" | "casado") {
+    console.log(estadoCivil);
+}
+imprimir("soltero");
 
 
 

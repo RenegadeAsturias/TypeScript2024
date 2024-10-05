@@ -1,5 +1,16 @@
 /**
+Tipos, lierales (literals)
 
+Los literals (literales) son bastante útiles cuando se combinan con el uso de funciones y unions.
 
+Un ejemplo es cuando deseamos restringir un parámetro a una serie de valores posibles, por ejemplo una serie de strings o numbers.
+
+function imprimir(estadoCivil: "soltero" | "casado") {
+    console.log(estadoCivil);
+}
+
+imprimir("soltero");
+
+También es posible combinar las literales con otros tipos. 
 */
 

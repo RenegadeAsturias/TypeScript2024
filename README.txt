@@ -5,6 +5,7 @@ git init
 git add README.md
 git commit -m "Curso TypeScript"
 git commit -m "Curso TypeScript. Teoría tipos de datos"
+git commit -m "Curso TypeScript. Teoría funciones"
 git branch -M main
 git remote add origin https://github.com/RenegadeAsturias/TypeScript2024.git
 git push -u origin main

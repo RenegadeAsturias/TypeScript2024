@@ -1,0 +1,63 @@
+(()=>{
+
+// 20-Funciones-como expresiones
+
+
+
+// 21-Funciones-call signature (firma de funciones)
+
+
+
+// 22-Funciones-constructor signature (firma de constructores)
+
+
+
+// 23-Funciones-generics (genericos)
+
+
+
+// 24-Funciones-generics inference (inferencia)
+
+
+
+// 25-Funciones-constraints (restricciones)
+
+
+
+// 26-Funciones-especificar type arguments (argumentos del Type)
+
+
+
+// 27-Funciones-recomendaciones al escribir generics
+
+
+
+// 28-Funciones-parámetros opcionales
+
+
+
+// 29-Funciones-overload (sobrecarga)
+
+
+
+// 30-Funciones-uso de 'this' (esto)
+
+
+
+// 31-Funciones-rest parameters (parámetros rest)
+
+
+
+// 32-Funciones-parameter destructuring (destructuración de parámetros)
+
+
+
+// 33-Funciones-void como valor de retorno 
+
+
+
+
+
+
+})();
+

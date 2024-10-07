@@ -1,0 +1,31 @@
+/**
+Funciones como expresiones
+
+La manera mas simple de describir una función es como una función que opera como un tipo de expresión. Estos tipos son sintáticamente como funciones de flecha (arrow functions).
+
+function saludar(fn: (a: string) => void) {
+    fn("Hola Mundo");
+}
+
+function imprimirEnConsola(s: string) {
+    console.log(s);
+}
+
+saludar(imprimirEnConsola);
+
+En el anterior ejemplo la función saludar recibe el parámetro fn es una función (a: string) => null que recibe un string y retorna null, y esta se envía y cuya invocación se realiza dentro de la función que la recibe fn("Hola Mundo"), que a su ves pasa el argumento "Hola Mundo".
+
+Si deseamos hacer el ejemplo anterior mas entendible podemos hacer uso de un alias que nos permite encapsular los parámetros dentro de ella.
+
+type Fn = (a: string) => void;
+
+function saludar(fn: Fn) {
+    fn("Hola Mundo");
+}
+
+function imprimirEnConsola(s: string) {
+    console.log(s);
+}
+
+saludar(imprimirEnConsola);
+*/

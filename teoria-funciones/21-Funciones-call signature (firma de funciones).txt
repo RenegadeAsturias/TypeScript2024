@@ -1,0 +1,45 @@
+/**
+Funciones, call signature (firma de funciones)
+
+En JavaScript, las funciones ademas de poder ser invocadas pueden tener propiedades. Sin embargo, la sintaxis de las funciones como expresiones no permiten declarar propiedades. Si queremos asociar valores adicionales a una función, podemos escribir un alias para dicho propósito.
+
+type FuncionDescribible = {
+    descripcion: string;
+    base: number;
+    (base: number): number;
+};
+
+function imprimirEnConsola(fn: FuncionDescribible) {
+    console.log(fn.descripcion + fn(fn.base));
+}
+
+const cuadradoDeUnNumero: FuncionDescribible = (base) => {
+    return base * base;
+};
+
+cuadradoDeUnNumero.descripcion = "El cuadrado de 2 es ";
+cuadradoDeUnNumero.base = 2;
+
+imprimirEnConsola(cuadradoDeUnNumero);
+
+const mitadDeUnNumero: FuncionDescribible = (base) => {
+    return base / 2;
+};
+
+mitadDeUnNumero.descripcion = "La mitad de 10 es ";
+mitadDeUnNumero.base = 10;
+
+imprimirEnConsola(mitadDeUnNumero);
+
+Salida…
+
+El cuadrado de 2 es 4
+La mitad de 10 es 5
+
+En JavaScript como comentamos, una función puede tener propiedades, en TypeScript podemos ayudarnos de un alias para definir dichas propiedades.
+
+
+
+
+
+*/

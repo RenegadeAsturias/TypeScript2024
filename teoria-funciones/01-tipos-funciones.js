@@ -30,7 +30,23 @@
     mitadDeUnNumero.descripcion = "La mitad de 10 es ";
     mitadDeUnNumero.base = 10;
     imprimirEnConsola(mitadDeUnNumero);
-    // 22-Funciones-constructor signature (firma de constructores)
+    class Caballo {
+        constructor(nombre) {
+            this.nombre = nombre;
+        }
+    }
+    class Automovil {
+        constructor(nombre) {
+            this.nombre = nombre;
+        }
+    }
+    function construirTransporte(ctr, nombre) {
+        return new ctr(nombre);
+    }
+    const miCaballo = construirTransporte(Caballo, "Paso Fino");
+    const miAutomovil = construirTransporte(Automovil, "Toyota");
+    console.log("Mi caballo se llama " + miCaballo.nombre);
+    console.log("Mi automovil es un " + miAutomovil.nombre);
     // 23-Funciones-generics (genericos)
     // 24-Funciones-generics inference (inferencia)
     // 25-Funciones-constraints (restricciones)

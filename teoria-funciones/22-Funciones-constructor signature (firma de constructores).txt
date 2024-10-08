@@ -1,4 +1,39 @@
 /**
+Funciones, constructor signature (firma de constructores)
 
+Las funciones de JavaScript pueden ser también invocadas con el operador new. TypeScript hace referencia a estos operadores como constructors (constructores) porque estos sirven para crear un objeto. Por ello se puede escribir un constructor signature (firma para el constructor) añadiendo la palabra new enfrente de la firma.
+
+interface Transporte {
+    nombre: string;
+}
+
+class Caballo implements Transporte {
+    constructor(public nombre: string) {}
+}
+
+class Automovil implements Transporte {
+    constructor(public nombre: string) {}
+}
+
+type ConstructorDeTransporte = {
+    new (nombre: string): Transporte;
+};
+
+function construirTransporte(ctr: ConstructorDeTransporte, nombre: string) {
+    return new ctr(nombre);
+}
+
+const miCaballo = construirTransporte(Caballo, "Paso Fino");
+const miAutomovil = construirTransporte(Automovil, "Toyota");
+
+console.log("Mi caballo se llama " + miCaballo.nombre);
+console.log("Mi automovil es un " + miAutomovil.nombre);
+
+Salida…
+
+Mi caballo se llama Paso Fino
+Mi automovil es un Toyota
+
+En el ejemplo hemos construido una función a la cual se le pasa un objeto que posee un constructor como parte de su firma. En este caso dicho constructor debe retornar un objeto que implemente la interface Transporte.
 
 */

@@ -79,6 +79,23 @@ console.log("Mi automovil es un " + miAutomovil.nombre);
 
 // 23-Funciones-generics (genericos)
 
+// Evitar esto
+function primerElementoDeUnArreglo(arreglo: any[]) {
+    return arreglo[0];
+}
+
+// Utilizar generics
+function obtenerPrimerElementoDeArreglo<Type>(arreglo: Type[]): Type {
+    return arreglo[0];
+}
+
+const primerNumero = obtenerPrimerElementoDeArreglo([1, 2, 3, 4]);
+
+console.log("El primer numero es " + primerNumero);
+
+const primeraLetra = obtenerPrimerElementoDeArreglo(["a", "b", "c", "d"]);
+
+console.log("La primera letra es " + primeraLetra);
 
 
 // 24-Funciones-generics inference (inferencia)

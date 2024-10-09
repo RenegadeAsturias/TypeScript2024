@@ -48,6 +48,18 @@
     console.log("Mi caballo se llama " + miCaballo.nombre);
     console.log("Mi automovil es un " + miAutomovil.nombre);
     // 23-Funciones-generics (genericos)
+    // Evitar esto
+    function primerElementoDeUnArreglo(arreglo) {
+        return arreglo[0];
+    }
+    // Utilizar generics
+    function obtenerPrimerElementoDeArreglo(arreglo) {
+        return arreglo[0];
+    }
+    const primerNumero = obtenerPrimerElementoDeArreglo([1, 2, 3, 4]);
+    console.log("El primer numero es " + primerNumero);
+    const primeraLetra = obtenerPrimerElementoDeArreglo(["a", "b", "c", "d"]);
+    console.log("La primera letra es " + primeraLetra);
     // 24-Funciones-generics inference (inferencia)
     // 25-Funciones-constraints (restricciones)
     // 26-Funciones-especificar type arguments (argumentos del Type)

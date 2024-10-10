@@ -61,6 +61,12 @@
     const primeraLetra = obtenerPrimerElementoDeArreglo(["a", "b", "c", "d"]);
     console.log("La primera letra es " + primeraLetra);
     // 24-Funciones-generics inference (inferencia)
+    function map(arr, func) {
+        return arr.map(func);
+    }
+    const longitudDeStrings = map(["hola mundo", "adios mundo"], (arg) => {
+        return arg.length;
+    });
     // 25-Funciones-constraints (restricciones)
     // 26-Funciones-especificar type arguments (argumentos del Type)
     // 27-Funciones-recomendaciones al escribir generics

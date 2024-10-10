@@ -99,8 +99,13 @@ console.log("La primera letra es " + primeraLetra);
 
 
 // 24-Funciones-generics inference (inferencia)
+function map<Entrada, Salida>(arr: Entrada[], func: (arg: Entrada) => Salida): Salida[] {
+    return arr.map(func);
+}
 
-
+const longitudDeStrings = map(["hola mundo", "adios mundo"], (arg) => {
+    return arg.length;
+});
 
 // 25-Funciones-constraints (restricciones)
 

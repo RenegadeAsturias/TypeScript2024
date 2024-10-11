@@ -129,11 +129,50 @@ console.log(`El string mas largo es '${elStringMasLargo}'`);
 
 
 // 26-Funciones-especificar type arguments (argumentos del Type)
+function combinar<T>(arr1: T[], arr2: T[]): T[] {
+    return arr1.concat(arr2);
+}
 
+// combinar([1, 2, 3], ["a"]); 
+
+//Type 'string' is not assignable to type 'number'.
+// 5 combinar([1, 2, 3], ["a"]);
+
+// Para poder utilizar la anterior función podemos especificarle los tipos que T puede tener.
+// combinar<string | number>([1, 2, 3], ["a"]);
 
 
 // 27-Funciones-recomendaciones al escribir generics
 
+// primerElemento1 Vs primerElemento2
+function primerElemento1<Type>(arr: Type[]) {
+    return arr[0];
+}
+
+function primerElemento2<Type extends any[]>(arr: Type[]) {
+    return arr[0];
+}
+
+// filtrar1 Vs filtrar2
+function filtrar1<Type>(arr: Type[], func: (arg: Type) => boolean): Type[] {
+    return arr.filter(func);
+}
+
+function filtrar2<Type, Func extends (arg: Type) => boolean>(
+    arr: Type[],
+    func: Func
+): Type[] {
+    return arr.filter(func);
+}
+
+/** saludarEj1 Vs saludarEj2
+function saludarEj1(Type extends string)(s: Type) {
+    console.log("Hola " + s);
+}
+
+function saludarEj2(s: string) {
+    console.log("Hola " + s);
+} */
 
 
 // 28-Funciones-parámetros opcionales

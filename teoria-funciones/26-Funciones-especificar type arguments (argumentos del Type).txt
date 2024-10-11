@@ -1,4 +1,24 @@
 /**
+Funciones, especificar type arguments (argumentos del Type)
 
+TypeScript puede deducir los argumentos provistos a Type dentro de una función que utiliza generics. Por ejemplo imaginemos que escribimos una función que combina dos arreglos.
+
+function combinar<T>(arr1: T[], arr2: T[]): T[] {
+    return arr1.concat(arr2);
+}
+
+Si intentamos combinar un arreglo con dos tipos distintos TypeScript nos generará un error.
+
+combinar([1, 2, 3], ["a"]);
+
+Type 'string' is not assignable to type 'number'.
+
+5 combinar([1, 2, 3], ["a"]);
+
+Para poder utilizar la anterior función podemos especificarle los tipos que T puede tener.
+
+combinar<string | number>([1, 2, 3], ["a"]);
+
+Ahora TypeScript puede invocar nuestra función combinar sin problemas. 
 
 */

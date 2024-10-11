@@ -68,6 +68,18 @@
         return arg.length;
     });
     // 25-Funciones-constraints (restricciones)
+    function determinarMasLargo(a, b) {
+        if (a.length) {
+            return a;
+        }
+        else {
+            return b;
+        }
+    }
+    const elArregloMasLargo = determinarMasLargo(["a", "b"], ["a", "b", "c"]);
+    console.log("El arreglo mas largo es ", elArregloMasLargo);
+    const elStringMasLargo = determinarMasLargo("this is my first text", "and this is text which is longer");
+    console.log(`El string mas largo es '${elStringMasLargo}'`);
     // 26-Funciones-especificar type arguments (argumentos del Type)
     // 27-Funciones-recomendaciones al escribir generics
     // 28-Funciones-parámetros opcionales

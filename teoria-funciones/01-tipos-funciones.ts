@@ -108,7 +108,24 @@ const longitudDeStrings = map(["hola mundo", "adios mundo"], (arg) => {
 });
 
 // 25-Funciones-constraints (restricciones)
+function determinarMasLargo<T extends { length: number }>(a: T, b: T) {
+    if (a.length) {
+        return a;
+    } else {
+        return b;
+    }
+}
 
+const elArregloMasLargo = determinarMasLargo(["a", "b"], ["a", "b", "c"]);
+
+console.log("El arreglo mas largo es ", elArregloMasLargo);
+
+const elStringMasLargo = determinarMasLargo(
+    "this is my first text",
+    "and this is text which is longer"
+);
+
+console.log(`El string mas largo es '${elStringMasLargo}'`);
 
 
 // 26-Funciones-especificar type arguments (argumentos del Type)

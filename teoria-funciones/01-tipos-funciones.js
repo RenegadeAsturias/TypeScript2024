@@ -113,6 +113,17 @@
         console.log("Hola " + s);
     } */
     // 28-Funciones-parámetros opcionales
+    function f1a(n) {
+        console.log(n.toFixed()); // no se especifican argumentos
+        console.log(n.toFixed(3)); // se especifica un argumento
+    }
+    function f1b(n) {
+        // ...
+    }
+    // También es posible asignar un valor por default y omitir el tipo que es inferido desde su asignación.
+    function f1c(n = 10) {
+        // ...
+    }
     // 29-Funciones-overload (sobrecarga)
     // 30-Funciones-uso de 'this' (esto)
     // 31-Funciones-rest parameters (parámetros rest)

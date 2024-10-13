@@ -192,11 +192,64 @@ function f1c(n = 10) {
 
 
 // 29-Funciones-overload (sobrecarga)
+function longitud1(a: any[]): number;
+function longitud1(x: string): number;
+function longitud1(x: any): number {
+    return x.length;
+}
 
+console.log(longitud1("hola mundo"));
+console.log(longitud1([1, 2, 3, 4, 5]));
+
+// Podemos simplificar esta función con sobrecarga
+//  de una forma mucho mas sencilla usando unions.
+
+function calcularLongitud(x: any[] | string) {
+    return x.length;
+}
+
+console.log(calcularLongitud("hola mundo"));
+console.log(calcularLongitud([1, 2, 3, 4, 5]));
 
 
 // 30-Funciones-uso de 'this' (esto)
+const usuario = {
+    id: 123,
+    admin: false,
+    volverseAdmin: function () {
+        this.admin = true;
+    },
+};
 
+console.log(usuario.admin);
+usuario.volverseAdmin();
+console.log(usuario.admin);
+
+// Funciona como esperamos 
+// Cuando ejecutamos la función volverseAdmin() el valor de admin cambia de false a true.
+// false;
+// true;
+
+// Pero OJO!!! cuando utilizamos una función de tipo flecha.
+
+const usuario2 = {
+    id: 123,
+    admin: false,
+    volverseAdmin: () => {
+        // this.admin = true; // ...El compilador ya muestra error
+    },
+};
+
+// Si lo ejecutamos igualmente 
+// En este caso this no permite hacer cambios a admin por lo cual el valor false se preserva.
+
+console.log(usuario2.admin);
+usuario2.volverseAdmin();
+console.log(usuario2.admin);
+
+// No Funciona como esperamos 
+// false;
+// false;
 
 
 // 31-Funciones-rest parameters (parámetros rest)

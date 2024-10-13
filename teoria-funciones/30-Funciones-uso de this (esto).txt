@@ -1,4 +1,42 @@
 /**
+Funciones, uso de 'this' (esto)
 
+TypeScript infiere cual será el elemento al cual this hace referencia, por ejemplo:
+
+const usuario = {
+    id: 123,
+    admin: false,
+    volverseAdmin: function () {
+        this.admin = true;
+    },
+};
+
+console.log(usuario.admin);
+usuario.volverseAdmin();
+console.log(usuario.admin);
+
+false;
+true;
+
+Cuando ejecutamos la función volverseAdmin() el valor de admin cambia de false a true.
+
+Ahora supongamos que en lugar de utilizar una función utilizamos una función tipo flecha.
+
+const usuario2 = {
+    id: 123,
+    admin: false,
+    volverseAdmin: () => {
+        this.admin = true;
+    },
+};
+
+console.log(usuario2.admin);
+usuario2.volverseAdmin();
+console.log(usuario2.admin);
+
+false;
+false;
+
+En este caso this no permite hacer cambios a admin por lo cual el valor false se preserva.
 
 */

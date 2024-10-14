@@ -1,4 +1,25 @@
 /**
+Funciones, rest parameters (parámetros rest)
 
+Además de utilizar parámetros opcionales o sobrecarga para hacer que las funciones acepten una variedad de argumentos, también es posible definir funciones que tomen un número indeterminado de argumentos utilizando rest parameters.
 
+Un parámetro rest aparece al final de la lista de parámetros con un prefijo de tres puntos seguido del nombre del parámetro ...nombre.
+
+function multiplicar(n: number, ...m: number[]): number {
+    return m.reduce((p, c) => {
+        return p * c;
+    }, n);
+}
+
+console.log(multiplicar(2, 2));
+console.log(multiplicar(2, 2, 3));
+console.log(multiplicar(2, 2, 3, 4));
+
+Salida…
+
+4;
+12;
+48;
+
+La función multiplicar recibe un segundo parámetro llama m, este almacena todos los números adicionales como parte de un arreglo tipo number y despues los multiplica uno a uno.
 */

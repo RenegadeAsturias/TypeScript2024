@@ -168,6 +168,14 @@
     // false;
     // false;
     // 31-Funciones-rest parameters (parámetros rest)
+    function multiplicar(n, ...m) {
+        return m.reduce((p, c) => {
+            return p * c;
+        }, n);
+    }
+    console.log(multiplicar(2, 2));
+    console.log(multiplicar(2, 2, 3));
+    console.log(multiplicar(2, 2, 3, 4));
     // 32-Funciones-parameter destructuring (destructuración de parámetros)
     // 33-Funciones-void como valor de retorno 
 })();

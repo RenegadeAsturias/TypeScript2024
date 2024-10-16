@@ -288,6 +288,12 @@ console.log(sumar3({ a: 1, b: 2, c: 3 }));
 */
 
 // 33-Funciones-void como valor de retorno 
+type funcionTipoVoid = () => void;
+
+/** No puede devolver nada
+const f4: funcionTipoVoid = (): void => {
+    return true;
+}; */
 
 
 

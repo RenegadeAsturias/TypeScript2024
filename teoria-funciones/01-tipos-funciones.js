@@ -176,27 +176,8 @@
     console.log(multiplicar(2, 2));
     console.log(multiplicar(2, 2, 3));
     console.log(multiplicar(2, 2, 3, 4));
-    // 32-Funciones-parameter destructuring (destructuración de parámetros)
-    /**
-    function sumar1(num) {
-        return num.a + num.b + num.c;
-    }
-    
-    const numeros = { a: 1, b: 2, c: 3 };
-    
-    console.log(sumar1(numeros));
-    
-    function sumar2({ a, b, c }): number {
-        return a + b + c;
-    }
-    
-    console.log(sumar2({ a: 1, b: 2, c: 3 }));
-    
-    function sumar3({ a, b, c }: { a: number; b: number; c: number }): number {
-        return a + b + c;
-    }
-    
-    console.log(sumar3({ a: 1, b: 2, c: 3 }));
-    */
-    // 33-Funciones-void como valor de retorno 
+    /** No puede devolver nada
+    const f4: funcionTipoVoid = (): void => {
+        return true;
+    }; */
 })();

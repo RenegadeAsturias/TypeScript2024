@@ -1,5 +1,5 @@
 
-Listado de Object-Types________________________________________________
+Listado de Object-Types_________________________________________________
 
 35-Object-types-tipos-de-objetos
 36-Object-types-property-modifiers
@@ -13,4 +13,4 @@ Listado de Object-Types________________________________________________
 45-Object-types-ReadonlyArray-type
 46-Object-types-Tuples-tuplas
 
-______________________________________________________________________
+_______________________________________________________________________

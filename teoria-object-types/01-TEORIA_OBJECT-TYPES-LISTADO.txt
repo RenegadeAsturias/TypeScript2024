@@ -1,0 +1,16 @@
+
+Listado de Object-Types________________________________________________
+
+35-Object-types-tipos-de-objetos
+36-Object-types-property-modifiers
+37-Object-types-readonly-properties
+38-Object-types-extender-tipos
+39-Object-types-extender-múltiples-tipos
+41-Object-types-intersection-types
+42-Object-types-interfaces-vs-intersections
+43-Object-types-generics
+44-Object-types-Array-type
+45-Object-types-ReadonlyArray-type
+46-Object-types-Tuples-tuplas
+
+______________________________________________________________________

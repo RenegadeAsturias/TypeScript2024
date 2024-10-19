@@ -1,3 +1,7 @@
 /**
+Object Types, interfaces vs intersections (interfaces vs intersecciones)
 
+Hemos visto dos formas en las cuales se pueden combinar tipos que tienen cierta similitud y simultáneamente diferentes. Con las interfaces utilizamos la clausula extends para poder extender desde otros tipos, algo similar a lo que sucede con las intersecciones. En ambos casos es posible dar un nombre al resultado de extender o interseccionar tipos.
+
+La principal diferencia entre extensión e intersección es la forma en la que cada una de estas formas manejan la resolución de conflictos, y esta suele ser la razón por la cual se elige entre una forma u otra.
 */

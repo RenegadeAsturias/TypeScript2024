@@ -1,3 +1,30 @@
 /**
+Object Types, intersection types (intersección de tipos)
 
+Las interfaces permiten construir nuevos tipos a partir de extender otros. TypeScript permite esta construcción a partir de la intersección que se utiliza para combinar tipos de datos existentes.
+
+Una tipo de intersección esta definida por el uso del operador &.
+
+interface Computador {
+    memoria: string;
+    procesador: string;
+    hdd: string;
+}
+
+interface SistemaOperativo {
+    so: string;
+    version: string;
+}
+
+type Portatil = Computador & SistemaOperativo;
+
+const macbookPro: Portatil = {
+    memoria: "16G",
+    procesador: "intel",
+    hdd: "1TB",
+    so: "osx",
+    version: "catalina",
+};
+
+Retomado el ejemplo en donde combinamos las interfaces, podemos ver que podemos utilizar la intersección para crear un nuevo alias type. En este caso el alias Portatil solo contiene las propiedades de Computador y SistemaOperativo. 
 */

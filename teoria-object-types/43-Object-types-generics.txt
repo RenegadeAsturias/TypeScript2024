@@ -1,3 +1,83 @@
 /**
+Object Types, generics (tipos genéricos)
 
+Imaginemos que tenemos un tipo Caja que contiene cualquier valor posible como string, number, etc.
+
+interface Caja {
+    contenido: any;
+}
+
+En esta ocasión, la propiedad contenido es definida como any, lo que permite trabajar con cualquier valor, pero que puede conducir a escenarios no deseados.
+
+Si por el contrario utilizamos uknown, esto implicaría que para aquellos casos en los cuales ya conocemos el tipo de contenido, se requeriría hacer comparaciones de precaución, o utilizar aserciones (asserts) para prevenir algunos errores.
+
+interface Caja {
+    contenido: unknown;
+}
+
+let x: Caja = {
+    contenido: "hola mundo",
+};
+
+// mediante typeof podemos verificar si el tipo es string
+if (typeof x.contenido === "string") {
+    console.log(x.contenido.toLocaleLowerCase());
+}
+
+// mediante "as tipo" podemos decirle al compilador que esto es siempre string
+console.log((x.contenido as string).toLocaleLowerCase());
+
+Otro posible enfoque es poder utilizar un tipo para cada uno de los casos.
+
+interface CajaNumber {
+    contenido: number;
+}
+
+interface CajaString {
+    contenido: string;
+}
+
+interface CajaBoolean {
+    contenido: boolean;
+}
+
+Sin embargo esto implica que tendremos que crear diferentes funciones/sobrecarga, para poder operar con cada uno de estos tipos.
+
+function setContenido(caja: CajaNumber, nuevoContenido: string): void;
+function setContenido(caja: CajaString, nuevoContenido: number): void;
+function setContenido(caja: CajaBoolean, nuevoContenido: boolean): void;
+function setContenido(caja: { contenido: any }, nuevoContenido: any) {
+    caja.contenido = nuevoContenido;
+}
+
+Utilizar sobrecarga para cubrir los escenarios de cada uno de los posibles tipos, no resulta ser la solución mas adecuada para solucionar este problema. 
+
+
+¿Qué son los Generics en TypeScript?
+
+Una herramienta muy útil para construir soluciones que respondan a tipos dinámicos es el uso de generics.
+
+interface Caja<T> {
+    contenido: T;
+}
+
+Piensa en la Caja como una plantilla que recibe un tipo, en donde T es un contenedor que será reemplazado con algún tipo. Cuando TypeScript ve Caja<string>, va a reemplazar cada instancia de T dentro de Caja<T> con el tipo string, para que se genere así un contenido: string.
+
+interface Caja<T> {
+    contenido: T;
+}
+
+let cajaDeString: Caja<string> = { contenido: "hola mundo" };
+let cajaDeNumero: Caja<number> = { contenido: 100 };
+let cajaDeFecha: Caja<Date> = { contenido: new Date() };
+
+Podemos ver que nuestra interface Caja<T> se convierte en una interface reutilizable para diferentes tipos. De igual forma podemos crear alias genéricos.
+
+type Caja<T> = {
+    contenido: T;
+};
+
+let cajaDeString: Caja<string> = { contenido: "hola mundo" };
+let cajaDeNumero: Caja<number> = { contenido: 100 };
+let cajaDeFecha: Caja<Date> = { contenido: new Date() };
 */

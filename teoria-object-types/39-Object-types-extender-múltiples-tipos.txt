@@ -1,3 +1,48 @@
 /**
+Object Types, extender múltiples tipos
 
+Las interfaces también permiten extender desde múltiples interfaces. Supongamos que tenemos una computadora MacbookPro, la cual esta conformada por los valores de las interfaces Computador, SistemaOperativo y Portatil. Por ende podemos combinar todas estas interfaces para asignar valores a nuestro nuevo objeto.
+
+interface Computador {
+    memoria: string;
+    procesador: string;
+    hdd: string;
+}
+
+interface SistemaOperativo {
+    so: string;
+    version: string;
+}
+
+interface Portatil extends Computador, SistemaOperativo {
+    bateria: string;
+    monitor: string;
+    teclado: string;
+}
+
+interface Servidor extends Computador, SistemaOperativo {
+    conexion: string;
+}
+
+const macbookPro: Portatil = {
+    memoria: "16G",
+    procesador: "intel",
+    hdd: "1TB",
+    so: "osx",
+    version: "catalina",
+    bateria: "litio",
+    monitor: "17 pulgadas",
+    teclado: "español",
+};
+
+const ubuntuServer: Servidor = {
+    memoria: "64G",
+    procesador: "intel",
+    hdd: "4TB",
+    so: "ubuntu",
+    version: "trusty",
+    conexion: "ethernet",
+};
+
+Teniendo como base las interfaces Computador y SistemaOperativo, podemos crear otras 2 interfaces Portatil y Servidor. En el caso de Portatil requerimos de un monitor y una batería, un monitor y un gabinete de cierta dimensión. Los servidores por su lado solo se administran desde la distancia, por lo que solo requerimos conectarlo para utilizarlo, por ello especificamos solo la configuración de la conexión.
 */

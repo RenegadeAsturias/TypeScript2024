@@ -1,0 +1,41 @@
+/**
+Object Types, extender tipos
+
+Es muy común tener tipos que pueden ser versiones de otros tipos. Por ejemplo podemos tener el tipo Direccion que describe los campos que son necesarios para el envío de correspondencia.
+
+interface Direccion {
+    nombre: string;
+    calle: string;
+    numero: number;
+    ciudad: string;
+    pais: string;
+    codigoPostal: string;
+}
+
+Sin embargo en algunos casos es necesario agregar alguna información adicional, por ejemplo los departamentos comparten el mismo número sobre la calle, suelen tener un identificador interno que puede ser una combinación de números y letras.
+
+interface DireccionDeApartamento {
+    nombre: string;
+    calle: string;
+    numero: number;
+    unidad: string;
+    ciudad: string;
+    pais: string;
+    codigoPostal: string;
+}
+
+Esto implica que tengamos que repetir todas las propiedades de la interface Direccion. Para evitar esto podemos usar el concepto de extensión, que permite utilizar la interface Base y solo agregar aquellos que hacen falta.
+
+interface Direccion {
+    nombre: string;
+    calle: string;
+    numero: number;
+    ciudad: string;
+    pais: string;
+    codigoPostal: string;
+}
+
+interface DireccionDeUnDepartamento extends Direccion {
+    unidad: string;
+}
+*/

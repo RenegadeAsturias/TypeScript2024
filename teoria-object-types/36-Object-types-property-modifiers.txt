@@ -1,0 +1,66 @@
+/**
+Object Types, property modifiers (modificadores de propiedades)
+
+Cada propiedad que existe en un objeto especifica un grupo de cosas: el tipo, si la propiedad es opcional, y si la propiedad es de solo lectura (no escribible) o no.
+Propiedades opcionales
+
+La mayoría de las veces, nos vamos a encontrar lidiando con objetos que pueden tener o no una propiedad definida. En estos casos, marcamos esta propiedad como opcional añadiendo el signo de interrogación ? al final del nombre de la propiedad.
+
+interface Computador {
+    os: "windows" | "linux" | "mac";
+    monitor?: "crt" | "led";
+    memoria: number;
+    procesador: "intel" | "amd";
+}
+
+function imprimir(computador: Computador) {
+    console.log(`Sistema operativo: ${computador.os}`);
+    console.log(`Memoria: ${computador.memoria}`);
+    console.log(`Procesador: ${computador.procesador}`);
+}
+
+imprimir({
+    os: "windows",
+    memoria: 8,
+    procesador: "intel",
+});
+
+La salida del programa…
+
+Sistema operativo: windows
+Memoria: 8
+Procesador: intel
+
+En este ejemplo, la propiedad monitor es considerada opcional. Podemos elegir si enviarla o no como parte del objeto que se envía como argumento a la función imprimir. Si no declaramos un valor para esta su valor sera undefined, es decir no definida.
+
+Si deseamos definir unos valores por default a las propiedades del parámetro computador, podemos hacer utilizando la destructuración.
+
+interface Computador {
+    os: "windows" | "linux" | "mac";
+    monitor?: "crt" | "led";
+    memoria: number;
+    procesador: "intel" | "amd";
+}
+
+function imprimir({ os, memoria, procesador, monitor = "led" }: Computador) {
+    console.log(`Sistema operativo: ${os}`);
+    console.log(`Monitor: ${monitor}`);
+    console.log(`Memoria: ${memoria}`);
+    console.log(`Procesador: ${procesador}`);
+}
+
+imprimir({
+    os: "windows",
+    memoria: 8,
+    procesador: "intel",
+});
+
+La salida del programa…
+
+Sistema operativo: windows
+Monitor: led
+Memoria: 8
+Procesador: intel
+
+Al descomponer el parámetro en cada uno de sus valores, podemos asignar a cada uno de estos un valor por default. 
+*/

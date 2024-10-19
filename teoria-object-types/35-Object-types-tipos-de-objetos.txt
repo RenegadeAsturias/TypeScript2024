@@ -1,0 +1,41 @@
+/**
+Object Types (tipos de objetos)
+
+En JavaScript, la forma mas básica en la que agrupamos y enviamos datos es a través de objetos. En TypeScript representamos estos a traves de object types (tipos de objeto).
+
+Éstos object types pueden ser anónimos.
+
+function saludar(persona: { nombre: string; edad: number }) {
+    return `Hola ${persona.nombre}`;
+}
+
+console.log(saludar({ nombre: "Damian", edad: 22 }));
+
+o pueden ser nombradas como una interface
+
+interface Persona {
+    nombre: string;
+    edad: number;
+}
+
+function saludar(persona: Persona) {
+    return `Hola ${persona.nombre}`;
+}
+
+console.log(saludar({ nombre: "Elena", edad: 25 }));
+
+o puede también ser nombradas como un alias
+
+type Persona = {
+    nombre: string;
+    edad: number;
+};
+
+function saludar(persona: Persona) {
+    return `Hola ${persona.nombre}`;
+}
+
+console.log(saludar({ nombre: "Anabel", edad: 30 }));
+
+En cualquiera de los ejemplos que acabamos de mostrar, es posible obtener la propiedad nombre (que es de tipo string) y edad (que es de tipo number). 
+*/

@@ -1,0 +1,52 @@
+/**
+Object Types, readonly properties (propiedades de solo lectura)
+
+Las propiedades pueden ser marcadas como propiedades de solo lectura o readonly dentro de TypeScript. En una propiedad tipo readonly solo podemos asignarle un valor cuando la instancia es creada, pero a partir de ese momento no podemos modificarlo.
+
+interface Perro {
+    readonly raza: string;
+}
+
+const miCachorro: Perro = { raza: "Shitzu" };
+
+console.log(`La raza de mi cachorro es: ${miCachorro.raza}`);
+
+Salida…
+
+La raza de mi cachorro es: Shitzu
+
+Sin embargo si complementamos el programa intentando cambiar la raza de nuestro cachorro (lo cual en teoría no es posible), el compilador nos generará un error.
+
+interface Perro {
+    readonly raza: string;
+}
+
+const miCachorro: Perro = { raza: "Shitzu" };
+
+console.log(`La raza de mi cachorro es: ${miCachorro.raza}`);
+
+miCachorro.raza = "pitbull";
+
+Salida…
+
+TSError: ⨯ Unable to compile TypeScript:
+main.ts(9,12): error TS2540: Cannot assign to 'raza' because it is a read-only property.
+
+Es importante entender las expectativas de lo que implica el uso de readonly. Es una señal de alerta durante el desarrollo en TypeScript acerca del como los objetos deben de ser utilizados. TypeScript no toma en cuenta las propiedades de dos tipos si estos son readonly al momento de verifica su compatibilidad, de tal forma que las propiedades readonly pueden ser cambiadas mediante el uso de un alias.
+
+interface Persona {
+    edad: number;
+}
+
+interface EdadNoEscribible {
+    readonly edad: number;
+}
+
+const Luis: Persona = { edad: 20 };
+
+const Pedro: EdadNoEscribible = Luis;
+
+Luis.edad++;
+Pedro.edad++; // <-- esto generara un error
+
+*/

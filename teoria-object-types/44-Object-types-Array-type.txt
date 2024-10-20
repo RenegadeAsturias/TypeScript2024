@@ -1,3 +1,52 @@
 /**
+Object Types, Array type (el tipo arreglo)
 
+Los generics son por lo general un contenedor de cierto tipo que trabajar de forma independiente del tipo de elementos que contiene. Es ideal para estructuras de datos trabajar de esta forma, de manera que sean reutilizables a través de diferentes tipos de datos.
+
+Hemos estado trabajando con el tipo Array a lo largo de las lecciones anteriores. Cuando hacemos referencia a string[] o number[], usamos la sintaxis alternativa a Array<string> y Array<number>.
+
+const imprimirTareas = (v: Array<string>) => {
+    v.forEach((v) => {
+        console.log(v);
+    });
+};
+
+const misTareas: string[] = [
+    "levantarse",
+    "lavarse los dientes",
+    "sacar al perro",
+];
+
+imprimirTareas(misTareas);
+
+Salida…
+
+levantarse
+lavarse los dientes
+sacar al perro
+
+    En la función imprimirTareas recibimos un parámetro tipo Array<string> (un arreglo de cadenas). Cuando invocamos la función imprimirTareas le enviamos el argumento misTareas que es tipo string[], que también hace referencia al mismo tipo de arreglo. Esto debido a que tanto Array<string> como string[] representan lo mismo. 
+
+Así como en la lección anterior en donde hablamos de generics, Array también representa un generic.
+
+interface Array<T> {
+    /**
+     * Obtiene el tamaño del arreglo
+     */
+    length: number;
+
+    /**
+     * Remueve el útimo elemento del arreglo y lo retorna
+     */
+    pop(): T | undefined;
+
+    /**
+     * Agrega un nuevo elemento al arreglo y retorna el tamaño de este
+     */
+    push(...items: T[]): number;
+
+    // ...
+}
+
+La programación moderna en JavaScript provee ademas otras estructuras que son también generics, como Map<K, V>, Set<T, y Promise<T>. Esto quiere decir que debido a como funcionan Map, Set y Promise, pueden trabajar con cualquier conjunto de tipos.
 */

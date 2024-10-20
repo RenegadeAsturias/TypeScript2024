@@ -1,0 +1,65 @@
+/**
+Object Types, Tuples (tuplas)
+
+Una tupla es otro tipo de Array que conoce exactamente cuantos elementos, de que tipo y en que posición contiene el arreglo.
+
+type Auto = [string, number];
+
+Aquí tenemos el tipo Auto que es una tupla que contiene un string y un number. Para TypeScript la tupla Auto describe un arreglo que contiene en la posición 0 un string y en la posición 1 un number.
+
+type Auto = [string, number];
+
+const prius: Auto = ["Toyota", 2015];
+const civic: Auto = ["Honda", 2016];
+
+console.log("El Prius es marca: ", prius[0], " y modelo: ", prius[1]);
+console.log("El Civic es marca: ", civic[0], " y modelo: ", civic[1]);
+
+Salida…
+
+El Prius es marca:  Toyota  y modelo:  2015
+El Civic es marca:  Honda  y modelo:  2016
+
+Si intentamos escribir un tipo invalido, el compilador de TypeScript generará un error. A diferencia de los arreglos de solo lectura, las tuplas si permiten que el valor de este tipo de arreglos sea modificado siempre que este se ajuste a la definición de la tupla. También soporta operaciones como push.
+
+Las tuplas son muy utilizadas dentro de las convenciones de API’s, cuando cada uno de los elementos tiene un sentido de obviedad. Esto brinda una buena flexibilidad cuando deseamos asignar nombres a partir de la destructuración.
+
+const prius: [string, number] = ["Toyota", 2015];
+
+const [marca, modelo] = prius;
+
+console.log("La marca del prius es: ", marca);
+console.log("El modelo del prius es: ", modelo);
+
+Otro detalle que pudiera ser interesante es que las tuplas pueden tener propiedades opcionales utilizando el signo de interrogación ? después del tipo. Los elementos opcionales de una tupla pueden solo aparecer al final, y también afectan el valor length (tamaño) de la tupla.
+
+type Auto = [string, number, string?];
+
+const prius: Auto = ["Toyota", 2015, "Raul Jimenez"];
+const civic: Auto = ["Honda", 2021];
+
+console.log("El prius fue vendido a:", prius[2]);
+console.log("El civic fue vendido a:", civic[2]);
+
+Salida…
+
+El prius fue vendido a: Raul Jimenez
+El civic fue vendido a: undefined
+
+Rest tuples (valores rest en tuplas)
+
+Las tuplas pueden contener elementos rest, este puede utilizarse solo para el último elemento de una tupla.
+
+type StringNumberBooleans = [string, number, ...boolean[]];
+const a: StringNumberBooleans = ["a", 1, true, false, true];
+
+Readonly tuples (tuplas de solo lectura)
+
+Un detalle final acerca de las tuplas es que estas también pueden ser de solo lectura readonly, y esto puede ser especificado de la siguiente forma.
+
+type Auto = readonly [string, number];
+
+const prius: Auto = ["Toyota", 2014];
+
+prius[0] = "Honda"; // <- esta linea generaria un error
+*/

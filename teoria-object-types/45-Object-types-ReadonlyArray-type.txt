@@ -1,3 +1,21 @@
 /**
+Object Types, ReadonlyArray type (el tipo de arreglo de solo lectura)
 
+El ReadonlyArray es un tipo especial que describe arreglos que no deberían cambiar.
+
+const miLista: ReadonlyArray<string> = ["a", "b", "c"];
+
+miLista.push("d"); // <- esta línea generaría un error
+
+El tipo ReadonlyArray es el equivalente para los arreglos de readonly para las propiedades. Cuando vemos una función que consume ReadonlyArray, nos dice que podemos pasar un arreglo a la función sin preocuparnos que este arreglo va a cambiar dentro de ella.
+
+A diferencia de Array, no existe el constructor ReadonlyArray que pueda ser utilizado. Por lo cual no se puede crear un arreglo ReadonlyArray de la siguiente forma.
+
+const miLista = new ReadonlyArray("a", "b", "c");
+
+En lugar de ello podemos asignar un arreglo normal a uno de solo lectura.
+
+const miLista: ReadonlyArray<string> = ["a", "b", "c"];
+
+Como ya comentamos, sintaxis alternativa de Array<Type> es Type[]. Para el caso de ReadonlyArray[Type] hay que agregar el prefijo readonly Type[] que indica que el arreglo es de solo lectura. 
 */

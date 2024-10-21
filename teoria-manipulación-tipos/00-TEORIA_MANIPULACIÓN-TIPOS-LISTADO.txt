@@ -1,0 +1,24 @@
+
+Listado de manipulación de tipos_______________________________________
+
+47-Manipulación-tipos-Manipulación-de-tipos
+48-Manipulación-tipos-Genéricos
+49-Manipulación-tipos-Variables-genéricas
+50-Manipulación-tipos-Tipos-genéricos
+51-Manipulación-tipos-Clases-genéricas
+52-Manipulación-tipos-Restricciones-genéricas
+53-Manipulación-tipos-Type-Parameters-en-Generic-Constraints
+54-Manipulación-tipos-Class-Types-en-Generics
+55-Manipulación-tipos-operador-keyof
+56-Manipulación-tipos-operador-typeof
+57-Manipulación-tipos-IAT-Tipos-basados-en-índices
+58-Manipulación-tipos-Tipos-basados-en-condicionales
+59-Manipulación-tipos-Restricciones
+60-Manipulación-tipos-Inferencia-en-Conditional-Types
+61-Manipulación-tipos-Tipos-condicionales-distributivos
+62-Manipulación-tipos-Tipos-basados-en-mapas
+63-Manipulación-tipos-Modificadores-en-mapas-basados-en-tipos
+64-Manipulación-tipos-Re-mapeado-de-propiedades
+65-Manipulación-tipos-TLT-Tipos-Literales-de-plantilla
+66-Manipulación-tipos-Tipos-intrínsecos-de-manipulación-de-strings
+________________________________________________________________________

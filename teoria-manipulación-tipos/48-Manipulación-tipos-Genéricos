@@ -1,0 +1,40 @@
+/**
+Type Manipulation, Generics (genéricos)
+
+Una gran parte de la Ingeniería del Software consiste en construir no solo componentes que bien bien definidos y consistentes, así como APIs consistentes. Los componentes que son capaces de trabajar con los datos deben de estar listos para trabajar con los datos del día de mañana.
+
+En lenguajes como C# y Java, una de las principales herramientas es el uso de generics, que es capaz de crear componentes que puedan trabajar con una variedad de tipos y no solo uno solo. Esto permite a los usuarios consumir estos componentes y sus propios tipos.
+Hola mundo de los generics
+
+Para arrancar vamos a utilizar el “hola mundo” de los generics; la función identidad. Esta función es una función que retornara cualquiera cosa que sea pasada a ella. Podemos pensar en esta función como un echo.
+
+Sin los generics, tendríamos que escribir una función identidad para cada uno de los tipos o utilizar el tipo any que cubra todos estos.
+
+function identidad(arg: any): any {
+    return arg;
+}
+
+Si bien any puede ser utilizado dentro de esta función para aceptar cualquier tipo, esta decisión también implica perder la información que es exclusiva del tipo que estamos retornando. Es decir, si enviamos un number o string a la salida el compilador no tendrá forma de saberlo.
+
+En su lugar, necesitamos capturar el tipo que se utiliza como argumento de forma que pueda ser utilizar para denotar que valor ha sido retornado. Si enviamos un number, la única información que debe ser retornada es la que es pertinente a este tipo.
+
+function identidad<T>(arg: T): T {
+    return arg;
+}
+
+Hemos agrega la variable de tipo T para identificar a la función identidad. Este tipo T permite capturar el tipo que el usuario provee (por ejemplo number), de tal forma que podamos utilizar la información después. Aquí, utilizamos T nuevamente para retornar el tipo. Durante la inspección, podemos ver que utilizamos el mismo tipo como argumento y el tipo retornado. Esto nos permite movernos entre un tipo de información de un tipo al de otro.
+
+Ahora podemos entonces que esta versión de la función identidad es genérica, de forma que puede operar sobre una diversidad de tipos. A diferencia de any, los generics no pierden la información del tipo el cual retornan en la salida.
+
+Una vez que hemos escrito la versión generic de identidad, podemos invocarla utilizando de varias formas. La primera es enviando todos los argumentos incluyendo el tipo del argumento.
+
+const salida = identidad2<string>("mi string");
+
+    Aquí hemos incluido de forma explicita el tipo T que es un string como uno de los argumentos para la función a ser invocada. 
+
+La segunda forma es la mas común. Enviamos solo el valor y el tipo es interferido, eso quiere decir que T es asignado de forma automática por el compilador.
+
+const salida2 = identidad2("mi string");
+
+Note que no hemos incluido el tipo de forma explicita dentro de <>; el compilador al ver "mi string" entiende que el tipo es string. Si bien la interferencia puede ser útil para mantener el código mas reducido, en pro de la legibilidad del código, es una buena idea el especificar el tipo de forma explicita como en el ejemplo 
+*/

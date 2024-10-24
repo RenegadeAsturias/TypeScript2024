@@ -1,0 +1,19 @@
+/**
+Type Manipulation (manipulación de tipos)
+Creación de tipos desde otros tipos
+
+TypeScript es un sistema muy poderoso debido a que permite expresar tipos en base a otros tipos.
+
+El ejemplo mas sencillo de esto es el uso de generics, eventualmente tenemos una gran variedad de tipos de operadores disponibles. Además también es posible expresar estos tipos en términos de valores que ya tenemos.
+
+Al combinar varios tipos de operadores, podemos expresar la complejidad de operaciones en una forma concisa y mantenible. En esta sección vamos a cubrir cuales son las formas de expresar un nuevo tipo en términos de un tipo o valor existente.
+
+Tipo______________Descripción
+Generics__________Tipos que toman parámetros.
+Keyof_____________Utiliza el operador keyof para crear nuevos tipos.
+Typeof____________Utiliza el operador typeof para crear nuevos tipos.
+Indexed___________Utiliza la sintaxis Tipo['a'] para acceder a un subtipo.
+Condicionales_____Tipos que actúan como si fueran sentencias en el sistema de tipos.
+Mapped____________Crea tipos mapeados en base a cada propiedad de un tipo existente.
+Template Literal__Tipos mapeados que cambian las propiedades en base a template literal strings.
+*/

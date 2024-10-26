@@ -1,3 +1,28 @@
 /**
+Type Manipulation, Generic Variables (variables genéricas)
 
+Cuando se comienzan a utilizar generics, se crean funciones que obligan al programador a usar el tipado de los parámetros dentro del cuerpo de la función de una forma correcta.
+
+Regresemos a la función identidad que vimos anteriormente.
+
+function identidad<T>(arg: T): T {
+    return arg;
+}
+
+Si intentamos utilizar la propiedad length como parte del argumento arg el compilador nos mostrara un error.
+
+function identidad<T>(arg: T): T {
+    console.log(arg.length); // <- error
+    return arg;
+}
+
+Lo que sucede es que estamos asumiendo que cualquier tipo enviado como T tendrá la propiedad length, escenario que no es real.
+
+Sin embargo si por ejemplo lo que estamos enviando es un arreglo de valores de cualquier tipo, sabemos que el tipo Array tiene una propiedad length, por lo cual esta función operaría de forma correcta.
+
+function identidad<T>(arg: T[]): T[] {
+    return arg;
+}
+
+La función genérica toma el parámetro T, lo aplica a un arreglo de enviado como argumento que tiene valor del tipo T y retorna un arreglo de valores del mismo tipo. 
 */

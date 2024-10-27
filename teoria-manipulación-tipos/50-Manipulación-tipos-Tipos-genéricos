@@ -1,3 +1,45 @@
 /**
+Type Manipulation, Generic Types (tipos genéricos)
 
+En lecciones previas creamos una función genérica llamada identidad que funciona sobre una variedad de diferentes tipos. En esta lección vamos a analizar el tipo de las propias funciones y el como crear interfaces genéricas.
+
+El tipo de las funciones genéricas es tal cual el de las funciones que no lo son, con los tipos de los parámetros listados al inicio, de forma similar a la declaración de funciones.
+
+function identidad<T>(arg: T): T {
+    return arg;
+}
+
+const miIdentidad: <I>(arg: I) => I = identidad;
+
+    Como vemos podemos usar diferentes nombres para hacer referencia al generic siempre y cuando el tipo de las variables y como estas son utilizadas sea consistente. 
+
+Podemos también escribir un type generic como la firma de una llamada de un object literal.
+
+let miIdentidad2: { <T>(arg: T): T } = identidad;
+
+Lo que nos llevaría a escribir nuestra primer interface genérica. Tomemos para ello un object literal del ejemplo previo y traslademosle a una interface.
+
+interface FuncionIdentidadGenerica {
+    <T>(arg: T): T;
+}
+
+function identidad<T>(arg: T): T {
+    return arg;
+}
+
+const miIdentidad: FuncionIdentidadGenerica = identidad;
+
+En un ejemplo similar, podemos mover el parámetro generic para ser parte de toda la interface. Esto hace que el parámetro este visible para todo el respeto de las componentes que forman la interface.
+
+interface FuncionIdentidadGenerica<T> {
+    (arg: T): T;
+}
+
+function identidad<T>(arg: T): T {
+    return arg;
+}
+
+const miIdentidad: FuncionIdentidadGenerica<number> = identidad;
+
+En esta actualización podemos ver que en lugar de describir lo que hace la función genérica, ahora tenemos una función no genérica que es parte de un tipo genérico. Cuando utilizamos FuncionIdentidadGenerica, tenemos ademas que especificar el tipo correspondiente (que es number en este caso). El entender cuando escribir el parámetro directamente sobre la firma de la llamada y cuando hacerlo sobre la interface es muy útil para ayudar a describir los aspectos de una función genérica. 
 */
